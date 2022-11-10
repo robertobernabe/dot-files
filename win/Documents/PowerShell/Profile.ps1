@@ -7,7 +7,12 @@ function Get-VsCodeDiff {
     & code -d $args
 }
 
+function Get-NVimDiff {
+    & nvim -d $args
+}
+
 New-Alias -Name codediff -Value Get-VsCodeDiff -Force -Option AllScope
+New-Alias -Name ndiff -Value Get-NVimDiff -Force -Option AllScope
 
 function Get-SvnIgnoreTxt($DirPath = ".") {
     $svnAllNotAdded = (svn status) | select-string -pattern '\?'
