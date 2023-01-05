@@ -1,4 +1,7 @@
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/jandedobbeleer.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/atomic.omp.json" | Invoke-Expression
+
+
+$PYTEST_CURRENT = Join-Path $Env:LocalAppData "Temp" "pytest-of-$Env:Username" "pytest-current"
 
 # Needed for midnight commander
 $Env:LANG = "en_EN.UTF8-8"
